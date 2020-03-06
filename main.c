@@ -22,7 +22,7 @@ int main() {
             break;
 
         case 2:
-            printf("Test 2");
+            printf("Les régle du jeu sont simple, quand vous lansez le jeu un tableau avec des bateaux placer aléatoirement dans la grille.\nLe but c'est de couller tout les bateaux ennemis avec le minimum d'attaque possible.\nLes bateaux ne son pas visibles sur la grille,quand vous en touchez un la case apparet en rouge.\nSi vous ne touchez pas de bateaux lors de votres attaque la case attaquée devien bleu.\nPour attaquer il faut entrer des coordonnées en commencent par la lettre puis le chiffre");
             break;
 
         case 3:
