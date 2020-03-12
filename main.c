@@ -13,8 +13,11 @@ int main() {
     int choixdumenu = 0;
 
     printf("\nBonjour et bienvenue sur la bataille naval\n\n\n");
-    printf("1) jouer\n2) voir les régles du jeu\n3) voir les scores\n");
-    scanf("%d", &choixdumenu);
+    do {
+        printf("1) jouer\n2) voir les régles du jeu\n3) voir les scores\n");
+        scanf("%d", &choixdumenu);
+    }
+    while (choixdumenu > 3 || choixdumenu <= 0);
 
     switch (choixdumenu) {
         case 1:
@@ -28,28 +31,11 @@ int main() {
         case 3:
             printf("Test 3");
             break;
-
-        default:
-            while (choixdumenu > 3 || choixdumenu <= 0) {
-                printf("entrez une selection valide\n\n");
-                printf("1) jouer\n2) voir les régles du jeu\n3) voir les scores\n");
-                scanf("%d", &choixdumenu);
-            }
-            switch (choixdumenu) {
-                case 1:
-                    printf("Test 1");
-                    break;
-
-                case 2:
-                    printf("Test 2");
-                    break;
-
-                case 3:
-                    printf("Test 3");
-                    break;
-            }
-
-            break;
     }
     return 0;
 }
+void menu (int choixdumenu){
+
+}
+
+
