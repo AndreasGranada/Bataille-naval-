@@ -5,12 +5,18 @@
 #include <stdio.h>
 #include <windows.h>
 
-
+void menu ();
 
 int main() {
-    // ajout de librérie windows pour la lecture des caractère spéciaux
     SetConsoleOutputCP(65001);
-    int choixdumenu = 0;
+    menu();
+    return 0;
+}
+void menu ()
+{
+// ajout de librérie windows pour la lecture des caractère spéciaux
+
+    int choixdumenu;
 
     printf("\nBonjour et bienvenue sur la bataille naval\n\n\n");
     do {
@@ -32,10 +38,6 @@ int main() {
             printf("Test 3");
             break;
     }
-    return 0;
-}
-void menu (int choixdumenu){
-
 }
 
 
