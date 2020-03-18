@@ -141,7 +141,7 @@ void jeux()
             // demande la valeur d'attaque vertical
             printf("Ou voulez vous tirer ?\nVertical:\n");
             scanf("%d", &Vertical);
-            if (Vertical < 11)
+            if (Vertical < 11 || Horizontal < 11)
             {
                 // demande la valeur d'attaque horizontal
                 printf("Horizontal:\n");
