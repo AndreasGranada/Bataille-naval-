@@ -9,7 +9,7 @@
 #include <windows.h>
 //déclaration des fonctions
 void menu ();
-void jeux ();
+void jeu ();
 
 int main() {
 
@@ -34,7 +34,7 @@ void menu()
     {
         //menu principal
         case 1:
-            jeux();
+            jeu();
             menu();
             system("cls");
             break;
@@ -60,7 +60,7 @@ void menu()
     }
 }
 //fonction du jeu
-void jeux()
+void jeu()
 {
     int Vertical = 0;
     int Horizontal = 0;
@@ -86,12 +86,12 @@ void jeux()
         for (int i = 0; i < 10; i++) {
             printf("%2d ", i + 1);
             for (int j = 0; j < 10; j++) {
-                //cange les valeur des case selon la contenance
-                if ((Tableaubat1[4][7] == 3) && (Tableaubat1[4][8] == 3) && (Tableaubat1[4][9] == 3))
+                //vérifie si les bateaux sont coulés
+                if ((Tableaubat1[4][4] == 3) && (Tableaubat1[5][4] == 3) && (Tableaubat1[6][4] == 3))
                 {
-                    Tableaubat1[4][7] = 5;
-                    Tableaubat1[4][8] = 5;
-                    Tableaubat1[4][9] = 5;
+                    Tableaubat1[4][4] = 5;
+                    Tableaubat1[5][4] = 5;
+                    Tableaubat1[6][4] = 5;
                     Compteur++;
                 }
                 if ((Tableaubat1[1][0] == 3) && (Tableaubat1[1][1] == 3) && (Tableaubat1[1][2] == 3) &&
@@ -103,21 +103,21 @@ void jeux()
                     Tableaubat1[1][3] = 5;
                     Compteur++;
                 }
-                if ((Tableaubat1[0][6] == 3) && (Tableaubat1[1][6] == 3) && (Tableaubat1[2][6] == 3))
+                if ((Tableaubat1[4][0] == 3) && (Tableaubat1[4][1] == 3) && (Tableaubat1[4][2] == 3))
                 {
-                    Tableaubat1[0][6] = 5;
-                    Tableaubat1[1][6] = 5;
-                    Tableaubat1[2][6] = 5;
+                    Tableaubat1[4][0] = 5;
+                    Tableaubat1[4][1] = 5;
+                    Tableaubat1[4][2] = 5;
                     Compteur++;
                 }
-                if ((Tableaubat1[8][4] == 3) && (Tableaubat1[8][5] == 3) && (Tableaubat1[8][6] == 3) &&
-                    (Tableaubat1[8][7] == 3) && (Tableaubat1[8][8] == 3))
+                if ((Tableaubat1[9][2] == 3) && (Tableaubat1[9][3] == 3) && (Tableaubat1[9][4] == 3) &&
+                    (Tableaubat1[9][5] == 3) && (Tableaubat1[9][6] == 3))
                 {
-                    Tableaubat1[8][4] = 5;
-                    Tableaubat1[8][5] = 5;
-                    Tableaubat1[8][6] = 5;
-                    Tableaubat1[8][7] = 5;
-                    Tableaubat1[8][8] = 5;
+                    Tableaubat1[9][2] = 5;
+                    Tableaubat1[9][3] = 5;
+                    Tableaubat1[9][4] = 5;
+                    Tableaubat1[9][5] = 5;
+                    Tableaubat1[9][6] = 5;
                     Compteur++;
                 }
                 if ((Tableaubat1[1][8] == 3) && (Tableaubat1[2][8] == 3))
@@ -150,20 +150,22 @@ void jeux()
                 Tableaubat1[Vertical - 1][Horizontal - 1] += 2;
             }
         }
-        //déclanchemant dans la victoir
+        //déclanchemant dans la victoire
         else {
             system("cls");
             printf("Bravo Vous avez gagne !\n1) Menu principal\n2) Arreter le programme\n");
+            printf("\n vous avez fait un score de %d",score);
             scanf("%d", &choixdumenu);
             switch (choixdumenu) {
                 case 1:
                     menu();
                     break;
-                case 2:
+                default:
                     exit(EXIT_SUCCESS);
+                    break;
             }
         }
-    } while ((Vertical < 11) && (Compteur < 61));
+    } while ((Vertical < 11) && (Compteur < 6));
 }
 
 
