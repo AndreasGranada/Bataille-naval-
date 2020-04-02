@@ -10,6 +10,7 @@
 //déclaration des fonctions
 void menu ();
 void jeu ();
+void fichierscore ();
 
 int main() {
 
@@ -20,7 +21,7 @@ void menu()
 {
 // ajout de librérie windows pour la lecture des caractère spéciaux
 
-    int choixdumenu;
+    int choixdumenu = 0;
 
     printf("\nBonjour et bienvenue sur la bataille naval\n\n\n");
     do {
@@ -30,10 +31,10 @@ void menu()
     }
     while (choixdumenu > 3 || choixdumenu <= 0);
 
-    switch (choixdumenu)
-    {
+    switch (choixdumenu) {
         //menu principal
         case 1:
+            //jeu
             jeu();
             menu();
             system("cls");
@@ -41,24 +42,50 @@ void menu()
 
         case 2:
             //régle du jeu
+            system("cls");
             printf("Les regle du jeu sont simple, quand vous lansez le jeu un tableau avec des bateaux placer aleatoirement dans la grille.\nLe but c'est de couller tout les bateaux ennemis avec le minimum d'attaque possible.\nLes bateaux ne son pas visibles sur la grille,quand vous en touchez un la case apparet en rouge.\nSi vous ne touchez pas de bateaux lors de votres attaque la case attaquee devien bleu.\nPour attaquer il faut entrer des coordonnees en commencent par la lettre puis le chiffre");
             printf("1) revenir au menu");
-            scanf("%d",&choixdumenu);
+            scanf("%d", &choixdumenu);
             //renvoye vers le menu prinsipal
-            switch(choixdumenu)
-            {
+            switch (choixdumenu) {
                 default:
                     menu();
                     break;
             }
-            break;
-
         case 3:
-            printf("futur scores");
-            menu();
+            fichierscore();
             break;
     }
 }
+//fonction d'identification
+void fichierscore()
+{
+    int Choixdumenu = 0;
+
+    printf("Voila tout les scores enregistes\n");
+
+    FILE *fic = fopen("Score.save.txt","r");
+    signed char Pseudonime[256];
+
+    if(fic == NULL)
+        exit(1);
+
+    while(fgets(Pseudonime, 255, fic) !=NULL)
+        printf("%s\n", Pseudonime);
+
+    fclose(fic);
+    printf("\n1) pour revenire au menu du jeu\n");
+    scanf("%d", &Choixdumenu);
+
+    switch (Choixdumenu)
+    {
+        default: menu();
+            break;
+    }
+
+}
+
+
 //fonction du jeu
 void jeu()
 {
@@ -67,7 +94,7 @@ void jeu()
     int choixdumenu = 0;
     int Compteur = 0;
     int score = 0;
-    //déclaration des bateau dans la grille
+    //déclaration des bateau et de la grille
     int Tableaubat1[10][10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                                1, 1, 1, 1, 0, 0, 0, 0, 1, 0,
                                0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
@@ -78,6 +105,15 @@ void jeu()
                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                                0, 0, 1, 1, 1, 1, 1, 0, 0, 0};
+    //déclaration de la variable de nom
+    signed char nom[256];
+    //écriture du nom infini si il est égale à zero
+    do {
+        printf("attention pas de chiffres\n");
+        printf("entrer votre nom de joueur\n");
+        scanf("%s", &nom);
+    } while(nom == NULL);
+
     do {
         system("cls");
         printf("si vous entrez une valeur differante le programme vous renvera au menu du jeu\n");
@@ -154,7 +190,17 @@ void jeu()
         else {
             system("cls");
             printf("Bravo Vous avez gagne !\n1) Menu principal\n2) Arreter le programme\n");
-            printf("\n vous avez fait un score de %d",score);
+            printf("\n vous avez fait un score de %d\n",score);
+
+            FILE *fic = fopen("Score.save.txt","r+");
+
+            if (fic == NULL)
+                exit(1);
+            fseek(fic, 0, SEEK_END);
+            fprintf(fic,"\n%s %d",nom ,score);
+
+            fclose(fic);
+
             scanf("%d", &choixdumenu);
             switch (choixdumenu) {
                 case 1:
