@@ -13,7 +13,7 @@ void jeu ();
 void fichierscore ();
 
 int main() {
-
+    //execution du menu du jeu 
     menu();
     return 0;
 }
@@ -63,17 +63,18 @@ void fichierscore()
     int Choixdumenu = 0;
 
     printf("Voila tout les scores enregistes\n");
-
-    FILE *fic = fopen("Score.save.txt","r");
+    //ouverture du fichier score
+    FILE *fic = fopen("../Save scores/Score.save.txt","r");
     signed char Pseudonime[256];
 
     if(fic == NULL)
         exit(1);
-
+    //boucle d'affichage de score
     while(fgets(Pseudonime, 255, fic) !=NULL)
         printf("%s\n", Pseudonime);
-
+    //fermeture du fichier score
     fclose(fic);
+    //revenir au menu du jeu
     printf("\n1) pour revenire au menu du jeu\n");
     scanf("%d", &Choixdumenu);
 
@@ -109,7 +110,7 @@ void jeu()
     signed char nom[256];
     //écriture du nom infini si il est égale à zero
     do {
-        printf("attention pas de chiffres\n");
+        printf("attention pas de chiffres et de caracteres speciaux \n");
         printf("entrer votre nom de joueur\n");
         scanf("%s", &nom);
     } while(nom == NULL);
@@ -191,16 +192,16 @@ void jeu()
             system("cls");
             printf("Bravo Vous avez gagne !\n1) Menu principal\n2) Arreter le programme\n");
             printf("\n vous avez fait un score de %d\n",score);
-
-            FILE *fic = fopen("Score.save.txt","r+");
-
+            //ouverture du fichier score
+            FILE *fic = fopen("../Save scores/Score.save.txt","r+");
+            //écriture du pseudonime du joueur et son score à côté
             if (fic == NULL)
                 exit(1);
             fseek(fic, 0, SEEK_END);
             fprintf(fic,"\n%s %d",nom ,score);
 
             fclose(fic);
-
+            //revenir au menu du jeu ou fermer le programe
             scanf("%d", &choixdumenu);
             switch (choixdumenu) {
                 case 1:
