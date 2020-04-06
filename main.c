@@ -7,22 +7,73 @@
 #include <string.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <time.h>
 //déclaration des fonctions
 void menu ();
 void jeu ();
 void fichierscore ();
+void temporalite (int tiement);
+void lancement();
+void joueur();
+void lireregle();
+void lirescore();
 
 int main() {
-    //execution du menu du jeu 
+    //execution du menu du jeu
     menu();
     return 0;
 }
+//c'est la date dans les logs qui s'affiche avant chaque messages
+void temporalite(int appelation)
+{
+    FILE* log = NULL;
+    char buffer[256] = {""};
+    time_t timestamp = time(NULL);
+    strftime(buffer, sizeof(buffer), "%A %d %B %Y - %X.", localtime(&timestamp));
+    log = fopen("../Logs/Logs.game.txt", "a");
+    fprintf(log, "[%s]", buffer);
+    fclose(log);
+}
+void lancement()
+{
+    temporalite(1);
+    FILE*log = NULL;
+    log = fopen("../Logs/Logs.game.txt", "a");
+    fprintf(log, "L'utilisateur est dans le menu\n");
+    fclose(log);
+}
+
+void joueur()
+{
+    temporalite(1);
+    FILE*log = NULL;
+    log = fopen("../Logs/Logs.game.txt", "a");
+    fprintf(log, "L'utilisateur entre son pseudonime\n");
+    fclose(log);
+}
+
+void lireregle()
+{
+    temporalite(1);
+    FILE*log = NULL;
+    log = fopen("../Logs/Logs.game.txt", "a");
+    fprintf(log, "L'utilisateur lit les regle\n");
+    fclose(log);
+}
+
+void lirescore()
+{
+    temporalite(1);
+    FILE*log = NULL;
+    log = fopen("../Logs/Logs.game.txt", "a");
+    fprintf(log, "L'utilisateur regarde les scores\n");
+    fclose(log);
+}
 void menu()
 {
-// ajout de librérie windows pour la lecture des caractère spéciaux
-
     int choixdumenu = 0;
 
+    lancement();
     printf("\nBonjour et bienvenue sur la bataille naval\n\n\n");
     do {
         // choix dans le menu et boucle pour les réponces diffèrantes
@@ -34,7 +85,7 @@ void menu()
     switch (choixdumenu) {
         //menu principal
         case 1:
-            //jeu
+            joueur();
             jeu();
             menu();
             system("cls");
@@ -43,8 +94,9 @@ void menu()
         case 2:
             //régle du jeu
             system("cls");
-            printf("Les regle du jeu sont simple, quand vous lansez le jeu un tableau avec des bateaux placer aleatoirement dans la grille.\nLe but c'est de couller tout les bateaux ennemis avec le minimum d'attaque possible.\nLes bateaux ne son pas visibles sur la grille,quand vous en touchez un la case apparet en rouge.\nSi vous ne touchez pas de bateaux lors de votres attaque la case attaquee devien bleu.\nPour attaquer il faut entrer des coordonnees en commencent par la lettre puis le chiffre");
-            printf("1) revenir au menu");
+            lireregle();
+            printf("Les regle du jeu sont simple, quand vous lansez le jeu un tableau avec des bateaux placer aleatoirement dans la grille.\nLe but c'est de couller tout les bateaux ennemis avec le minimum d'attaque possible.\nLes bateaux ne son pas visibles sur la grille,quand vous en touchez un la case apparet en rouge.\nSi vous ne touchez pas de bateaux lors de votres attaque la case attaquee devien bleu.\nPour attaquer il faut entrer des coordonnees en commencent par la lettre puis le chiffre\n");
+            printf("\n1) revenir au menu");
             scanf("%d", &choixdumenu);
             //renvoye vers le menu prinsipal
             switch (choixdumenu) {
@@ -53,6 +105,7 @@ void menu()
                     break;
             }
         case 3:
+            lirescore();
             fichierscore();
             break;
     }
