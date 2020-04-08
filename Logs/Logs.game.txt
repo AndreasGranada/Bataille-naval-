@@ -1,0 +1,36 @@
+[Wednesday 08 April 2020 - 23:56:22.]L'utilisateur est dans le menu
+[Wednesday 08 April 2020 - 23:56:41.]L'utilisateur entre son pseudonime
+[Wednesday 08 April 2020 - 23:56:50.]L'utilisateur c'est appelé andreas
+[Wednesday 08 April 2020 - 23:57:14.]L'utilisateur andreas à tier sur 2 en vertical
+[Wednesday 08 April 2020 - 23:57:16.]L'utilisateur andreas à tier sur 2 en Horizontal
+[Wednesday 08 April 2020 - 23:57:22.]L'utilisateur andreas à tier sur 10 en vertical
+[Wednesday 08 April 2020 - 23:57:23.]L'utilisateur andreas à tier sur 10 en Horizontal
+[Wednesday 08 April 2020 - 23:57:29.]L'utilisateur andreas à tier sur 9 en vertical
+[Wednesday 08 April 2020 - 23:57:31.]L'utilisateur andreas à tier sur 9 en Horizontal
+[Wednesday 08 April 2020 - 23:57:53.]L'utilisateur andreas à tier sur 2 en vertical
+[Wednesday 08 April 2020 - 23:57:54.]L'utilisateur andreas à tier sur 2 en Horizontal
+[Wednesday 08 April 2020 - 23:58:01.]L'utilisateur andreas à tier sur 3 en vertical
+[Wednesday 08 April 2020 - 23:58:02.]L'utilisateur andreas à tier sur 3 en Horizontal
+[Wednesday 08 April 2020 - 23:58:04.]L'utilisateur andreas à tier sur 4 en vertical
+[Wednesday 08 April 2020 - 23:58:04.]L'utilisateur andreas à tier sur 4 en Horizontal
+[Wednesday 08 April 2020 - 23:58:40.]L'utilisateur andreas à tier sur 9 en vertical
+[Wednesday 08 April 2020 - 23:58:41.]L'utilisateur andreas à tier sur 9 en Horizontal
+[Wednesday 08 April 2020 - 23:58:46.]L'utilisateur andreas à tier sur 9 en vertical
+[Wednesday 08 April 2020 - 23:58:48.]L'utilisateur andreas à tier sur 9 en Horizontal
+[Wednesday 08 April 2020 - 23:58:50.]L'utilisateur andreas à tier sur 9 en vertical
+[Wednesday 08 April 2020 - 23:58:50.]L'utilisateur andreas à tier sur 9 en Horizontal
+[Thursday 09 April 2020 - 00:05:12.]L'utilisateur andreas à tier sur 9 en vertical
+[Thursday 09 April 2020 - 00:05:13.]L'utilisateur andreas à tier sur 9 en Horizontal
+[Thursday 09 April 2020 - 00:05:27.]L'utilisateur andreas à tier sur 9 en vertical
+[Thursday 09 April 2020 - 00:05:28.]L'utilisateur andreas à tier sur 9 en Horizontal
+[Thursday 09 April 2020 - 00:05:37.]L'utilisateur andreas à tier sur 9 en vertical
+[Thursday 09 April 2020 - 00:05:37.]L'utilisateur andreas à tier sur 9 en Horizontal
+[Thursday 09 April 2020 - 00:07:19.]L'utilisateur andreas à tier sur 3 en vertical
+[Thursday 09 April 2020 - 00:07:19.]L'utilisateur andreas à tier sur 3 en Horizontal
+[Thursday 09 April 2020 - 00:07:22.]L'utilisateur andreas à tier sur 3 en vertical
+[Thursday 09 April 2020 - 00:07:22.]L'utilisateur andreas à tier sur 3 en Horizontal
+[Thursday 09 April 2020 - 00:08:37.]L'utilisateur est dans le menu
+[Thursday 09 April 2020 - 00:08:43.]L'utilisateur regarde les scores
+[Thursday 09 April 2020 - 00:08:56.]L'utilisateur est dans le menu
+[Thursday 09 April 2020 - 00:09:10.]L'utilisateur lit les regle
+[Thursday 09 April 2020 - 00:09:17.]L'utilisateur est dans le menu

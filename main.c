@@ -505,13 +505,13 @@ void jeu()
                                 Tableaubat3[5][8] = 5;
                                 Compteur++;
                             }
-                            if ((Tableaubat3[4][3] == 3) && (Tableaubat3[4][4] == 3) && (Tableaubat3[4][5] == 3) &&
-                                (Tableaubat3[4][6] == 3) && (Tableaubat3[4][7] == 3)) {
-                                Tableaubat3[4][3] = 5;
-                                Tableaubat3[4][4] = 5;
-                                Tableaubat3[4][5] = 5;
-                                Tableaubat3[4][6] = 5;
-                                Tableaubat3[4][7] = 5;
+                            if ((Tableaubat3[8][4] == 3) && (Tableaubat3[8][5] == 3) && (Tableaubat3[8][6] == 3) &&
+                                (Tableaubat3[8][7] == 3) && (Tableaubat3[8][8] == 3)) {
+                                Tableaubat3[8][4] = 5;
+                                Tableaubat3[8][5] = 5;
+                                Tableaubat3[8][6] = 5;
+                                Tableaubat3[8][7] = 5;
+                                Tableaubat3[8][8] = 5;
                                 Compteur++;
                             }
                             if ((Tableaubat3[2][3] == 3) && (Tableaubat3[2][4] == 3)) {
